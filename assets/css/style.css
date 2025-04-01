@@ -1,0 +1,138 @@
+/* General Styling */
+body {
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 40px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative; /* For positioning the back button */
+}
+
+.character {
+  font-size: clamp(48px, 8vw, 96px); /* Responsive font sizing */
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: clamp(18px, 4vw, 24px); /* Adjust for small screens */
+  width: calc(100% - 22px);
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: clamp(16px, 3vw, 20px); /* Scale message text */
+  color: #333;
+  height: 24px; /* Reserve space for feedback message */
+}
+
+/* Selection Screen Styling */
+.selection-screen {
+  text-align: center;
+  padding: 30px 20px; /* Overall padding */
+}
+
+.selection-screen h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font sizing */
+  margin-bottom: 20px; /* Space below heading */
+  color: #333;
+}
+
+.selection-screen .subheading {
+  font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive subheading */
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.option-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Increase space between boxes */
+  flex-wrap: wrap; /* Wrap boxes to next line on small screens */
+  margin-top: 30px; /* Space below heading */
+  margin-bottom: 40px; /* Space above the button */
+}
+
+.option-box {
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: clamp(120px, 40vw, 150px); /* Responsive box size */
+  height: clamp(120px, 40vw, 150px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-box[data-selected="true"] {
+  border-color: #007BFF;
+  background-color: #e9f3ff;
+}
+
+.option-box:hover {
+  border-color: #007BFF;
+}
+
+/* Symbol inside the option box */
+.option-box .symbol {
+  font-size: clamp(36px, 10vw, 48px); /* Scalable symbol size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px; /* Space below the symbol */
+}
+
+/* Label inside the option box */
+.option-box .label {
+  font-size: clamp(16px, 4vw, 18px); /* Responsive label text */
+  color: #555;
+  text-align: center; /* Center the label text */
+}
+
+/* Button Styling */
+.selection-screen button {
+  padding: 15px 30px; /* Larger button padding */
+  margin-top: 20px; /* Space above button */
+  font-size: clamp(16px, 4vw, 18px); /* Scalable button size */
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.selection-screen button:hover {
+  background-color: #0056b3;
+}
+
+/* Back Button Styling */
+.back-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: clamp(16px, 3vw, 18px); /* Scalable button size */
+  color: lightgray;
+  cursor: pointer;
+}
+.back-button:hover {
+  color: gray;
+}

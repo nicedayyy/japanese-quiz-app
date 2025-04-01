@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Japanese Quiz App</title>
+      <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+   <body>
+      <!-- Character Selection Screen --> 
+      <div class="selection-screen" id="selectionScreen">
+         <h2>Select Character Type</h2>
+         <div class="option-container">
+            <div class="option-box" id="hiraganaBox" data-selected="false" aria-label="Select Hiragana">
+               <div class="symbol">ひ</div>
+               <div class="label">Hiragana</div>
+            </div>
+            <div class="option-box" id="katakanaBox" data-selected="false" aria-label="Select Hiragana">
+               <div class="symbol">カ</div>
+               <div class="label">Katakana</div>
+            </div>
+         </div>
+         <button id="startButton">Start Game</button> 
+      </div>
+      <!-- Game Screen (Initially Hidden) --> 
+      <div class="container" id="gameScreen" style="display: none;">
+         <div class="character" id="character"></div>
+         <input type="text" id="romajiInput" placeholder="Type romaji here" autocomplete="off" /> 
+         <div class="message" id="message"></div>
+         <div class="back-button" id="backButton">&#x21A9; back</div>
+      </div>
+      <script src="assets/js/app.js"></script> 
+   </body>
+</html>
