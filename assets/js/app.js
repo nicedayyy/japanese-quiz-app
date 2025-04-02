@@ -165,6 +165,20 @@ function goBack() {
   getElement("selectionScreen").style.display = "block";
 }
 
+// NEW SETTINGS FUNCTIONS
+function openSettings() {
+  // Hide other screens and display the settings screen
+  getElement("selectionScreen").style.display = "none";
+  getElement("gameScreen").style.display = "none";
+  getElement("settingsScreen").style.display = "block";
+}
+
+function closeSettings() {
+  // Hide the settings screen and return to the selection screen
+  getElement("settingsScreen").style.display = "none";
+  getElement("selectionScreen").style.display = "block";
+}
+
 // Event listeners
 function addEventListeners() {
   getElement("hiraganaBox").addEventListener("click", () => toggleSelection("hiraganaBox", hiraganaMap));
@@ -172,12 +186,17 @@ function addEventListeners() {
   getElement("startButton").addEventListener("click", startGame);
   getElement("romajiInput").addEventListener("keydown", handleKeyPress);
   getElement("backButton").addEventListener("click", goBack);
+
+  // Settings screen event listeners
+  getElement("settingsButton").addEventListener("click", openSettings);
+  getElement("settingsBackButton").addEventListener("click", closeSettings);
 }
 
 // Initialize app
 window.onload = () => {
   getElement("selectionScreen").style.display = "block";
   getElement("gameScreen").style.display = "none";
+  getElement("settingsScreen").style.display = "none";
 
   addEventListeners();
 };
