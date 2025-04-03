@@ -179,6 +179,22 @@ function closeSettings() {
   getElement("selectionScreen").style.display = "block";
 }
 
+function selectLightningRound() {
+  // Hide the Game Mode screen
+  getElement("gameModeScreen").style.display = "none";
+
+  // Show the Character Selection screen
+  getElement("selectionScreen").style.display = "block";
+}
+
+function goToGameMode() {
+  // Hide the Character Selection Screen
+  getElement("selectionScreen").style.display = "none";
+
+  // Show the Game Mode Screen
+  getElement("gameModeScreen").style.display = "block";
+}
+
 // Event listeners
 function addEventListeners() {
   getElement("hiraganaBox").addEventListener("click", () => toggleSelection("hiraganaBox", hiraganaMap));
@@ -186,6 +202,8 @@ function addEventListeners() {
   getElement("startButton").addEventListener("click", startGame);
   getElement("romajiInput").addEventListener("keydown", handleKeyPress);
   getElement("backButton").addEventListener("click", goBack);
+  getElement("lightningRound").addEventListener("click", selectLightningRound);
+  getElement("selectionBackButton").addEventListener("click", goToGameMode);
 
   // Settings screen event listeners
   getElement("settingsButton").addEventListener("click", openSettings);
@@ -194,7 +212,8 @@ function addEventListeners() {
 
 // Initialize app
 window.onload = () => {
-  getElement("selectionScreen").style.display = "block";
+  getElement("gameModeScreen").style.display = "block";
+  getElement("selectionScreen").style.display = "none";
   getElement("gameScreen").style.display = "none";
   getElement("settingsScreen").style.display = "none";
 

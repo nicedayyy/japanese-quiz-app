@@ -9,6 +9,17 @@
       <!-- Settings Toggle Button (Top-Left) -->
       <button id="settingsButton" class="settings-toggle" aria-label="Settings">⚙</button>
       
+      <!-- Game mode screen -->
+      <div class="container" id="gameModeScreen">
+         <h2>Game Mode</h2>
+         <div class="option-container">
+            <!-- Lightning round option -->
+            <div class="option-box" id="lightningRound" aria-label="Lightning Round">
+               <div class="label">Lightning Round</div>
+            </div>
+         </div>
+      </div>
+
       <!-- Character Selection Screen --> 
       <div class="selection-screen" id="selectionScreen">
          <h2>Select Character Type</h2>
@@ -22,7 +33,8 @@
                <div class="label">Katakana</div>
             </div>
          </div>
-         <button id="startButton">Start Game</button> 
+         <button id="startButton">Start Game</button>
+         <div class="back-button" id="selectionBackButton" aria-label="Go back">&#x21A9; back</div>
       </div>
       
       <!-- Game Screen (Initially Hidden) --> 
