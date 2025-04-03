@@ -187,6 +187,14 @@ function selectLightningRound() {
   getElement("selectionScreen").style.display = "block";
 }
 
+function goToGameMode() {
+  // Hide the Character Selection Screen
+  getElement("selectionScreen").style.display = "none";
+
+  // Show the Game Mode Screen
+  getElement("gameModeScreen").style.display = "block";
+}
+
 // Event listeners
 function addEventListeners() {
   getElement("hiraganaBox").addEventListener("click", () => toggleSelection("hiraganaBox", hiraganaMap));
@@ -195,6 +203,7 @@ function addEventListeners() {
   getElement("romajiInput").addEventListener("keydown", handleKeyPress);
   getElement("backButton").addEventListener("click", goBack);
   getElement("lightningRound").addEventListener("click", selectLightningRound);
+  getElement("selectionBackButton").addEventListener("click", goToGameMode);
 
   // Settings screen event listeners
   getElement("settingsButton").addEventListener("click", openSettings);
